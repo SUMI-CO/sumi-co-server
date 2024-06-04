@@ -20,7 +20,7 @@ export const Footer: FC = () => {
     },
     {
       text: "Support service",
-      link: "",
+      link: "https://www.youtube.com/watch?v=UT0hcdlYTdg",
     },
   ];
 
@@ -31,7 +31,7 @@ export const Footer: FC = () => {
           key={navigation.text}
           href={navigation.link}
           target="_blank"
-          className="cursor:pointer text-decoration:none f:#212427"
+          className="cursor:pointer text-decoration:none f:#212427 f:medium"
         >
           {navigation.text}
         </a>

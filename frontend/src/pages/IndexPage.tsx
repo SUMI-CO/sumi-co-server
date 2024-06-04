@@ -1,7 +1,9 @@
 import { FC } from "react";
 
+import { INavigationButton } from "../types/pages";
+
 export const IndexPage: FC = () => {
-  const navigationButtons = [
+  const navigationButtons: INavigationButton[] = [
     {
       headerLabel: "Самостоятельные работы",
       items: [
