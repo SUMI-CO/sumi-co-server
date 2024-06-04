@@ -1,0 +1,52 @@
+@import "variables";
+
+@import "primeng-sass-theme/themes/lara/lara-light/blue/theme.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  color: $fontColor;
+  background-color: #fff;
+}
+
+.root-main {
+  display: flex;
+  flex: 1;
+
+  background-color: $backgroundColor;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.min-h-window-full {
+  height: 100vh;
+}
+
+.beautiful-shadow {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
