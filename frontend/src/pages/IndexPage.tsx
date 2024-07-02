@@ -1,8 +1,29 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "primereact/button";
 
 import { INavigationButton } from "../types/pages";
+import { PAGES } from "../constants/pages.ts";
 
 export const IndexPage: FC = () => {
+  const navigate = useNavigate();
+
+  const progressesItems = [
+    {
+      label: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      imageUrl: "https://placehold.co/65",
+    },
+    {
+      label: "Consectetur adipisicing elit.",
+      imageUrl: "https://placehold.co/65",
+    },
+
+    {
+      label: "Solor sit amet, consectetur adipisicing",
+      imageUrl: "https://placehold.co/65",
+    },
+  ];
+
   const navigationButtons: INavigationButton[] = [
     {
       headerLabel: "Самостоятельные работы",
@@ -11,7 +32,7 @@ export const IndexPage: FC = () => {
           title: "Курс",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.COURSES.INDEX,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },
@@ -70,7 +91,7 @@ export const IndexPage: FC = () => {
   ];
 
   return (
-    <div className="index-page flex justify-content:space-between gap-x:75 p:45">
+    <div className="index-page flex justify-content:space-between gap-x:45 p:40">
       <div className="left">
         <div className="navigations-buttons">
           {navigationButtons.map((navigation, index) => (
@@ -78,7 +99,7 @@ export const IndexPage: FC = () => {
               key={navigation.headerLabel}
               className={"navigation " + (index > 0 ? "margin-top:40" : "")}
             >
-              <h3 className="title font:bold f:#566F9E padding-bottom:10 f:24 border-bottom:1|solid|#566F9E margin-right:100 margin-bottom:20">
+              <h3 className="title f:22 font:bold f:#566F9E padding-bottom:10 border-bottom:1|solid|#566F9E margin-right:100 margin-bottom:20">
                 {navigation.headerLabel}
               </h3>
 
@@ -86,7 +107,7 @@ export const IndexPage: FC = () => {
                 {navigation.items.map((item) => (
                   <div
                     key={item.title}
-                    className="item flex bg:#fff beautiful-shadow"
+                    className="item flex bg:#fff beautiful-shadow r:6px overflow:hidden"
                   >
                     <div className="left w:160 h:160">
                       <img
@@ -97,7 +118,10 @@ export const IndexPage: FC = () => {
                     </div>
 
                     <div className="right">
-                      <h4 className="border-bottom:1|solid|#21242726 padding:15 f:18">
+                      <h4
+                        className="border-bottom:1|solid|#21242726 padding:15 f:18 cursor:pointer"
+                        onClick={() => navigate(item.link)}
+                      >
                         {item.title}
                       </h4>
 
@@ -112,9 +136,33 @@ export const IndexPage: FC = () => {
       </div>
 
       <div className="right">
-        <h3>Достижения</h3>
+        <h3 className="margin-bottom:2.3rem">Достижения</h3>
 
-        <div className="items flex flex-column gap-x:20">hello</div>
+        <div className="progresses flex flex:column gap-y:20 margin-bottom:20 w:300px">
+          {progressesItems.map((progress) => (
+            <div
+              key={progress.label}
+              className="flex bg:white justify-content:space-between align-items:center beautiful-shadow r:6px overflow:hidden"
+            >
+              <div className="left w:70 h:70">
+                <img
+                  src={progress.imageUrl}
+                  alt="progress, image, url"
+                  className="w:70 h:70"
+                />
+              </div>
+
+              <div className="right w:full padding:15">
+                <p>{progress.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <Button
+          label="Все достижения"
+          className="w:300px"
+        />
       </div>
     </div>
   );

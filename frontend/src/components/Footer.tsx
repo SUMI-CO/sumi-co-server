@@ -20,12 +20,12 @@ export const Footer: FC = () => {
     },
     {
       text: "Support service",
-      link: "https://www.youtube.com/watch?v=UT0hcdlYTdg",
+      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
   ];
 
   return (
-    <footer className="root-footer bg:#f2f4fa padding:45|45|25|45 flex gap-x:40">
+    <footer className="root-footer padding:45|45|25|45 flex gap-x:40">
       {socialNavigations.map((navigation) => (
         <a
           key={navigation.text}
