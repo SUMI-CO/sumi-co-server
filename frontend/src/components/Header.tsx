@@ -9,7 +9,7 @@ export const Header: FC = () => {
 
   return (
     <header
-      className="root-header bg:#566F9E padding:15|45 rb:18"
+      className="root-header bg:#566F9E padding:15|45 rb:12"
       onClick={() => navigate(PAGES.DASHBOARD.INDEX)}
     >
       <img

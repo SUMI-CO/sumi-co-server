@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 
 import "@master/css";
 
@@ -14,28 +15,30 @@ import { PAGES } from "./constants/pages.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<AppLayout />}>
-          <Route
-            index={true}
-            path={PAGES.DASHBOARD.INDEX}
-            element={<IndexPage />}
-          />
-
-          <Route path={PAGES.DASHBOARD.COURSES.INDEX}>
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AppLayout />}>
             <Route
               index={true}
-              element={<CoursesPage />}
+              path={PAGES.DASHBOARD.INDEX}
+              element={<IndexPage />}
             />
 
-            <Route
-              path={PAGES.DASHBOARD.COURSES.SINGLE_COURSES}
-              element={<SingleCoursesPage />}
-            />
+            <Route path={PAGES.DASHBOARD.COURSES.INDEX}>
+              <Route
+                index={true}
+                element={<CoursesPage />}
+              />
+
+              <Route
+                path={PAGES.DASHBOARD.COURSES.SINGLE_COURSES}
+                element={<SingleCoursesPage />}
+              />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </RecoilRoot>
   </React.StrictMode>,
 );

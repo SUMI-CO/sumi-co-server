@@ -107,7 +107,8 @@ export const IndexPage: FC = () => {
                 {navigation.items.map((item) => (
                   <div
                     key={item.title}
-                    className="item flex bg:#fff beautiful-shadow r:6px overflow:hidden"
+                    onClick={() => navigate(item.link)}
+                    className="item flex bg:#fff beautiful-shadow r:6px overflow:hidden transform:scale(1.025):hover ~transform|100ms|ease-in cursor:pointer"
                   >
                     <div className="left w:160 h:160">
                       <img
@@ -118,10 +119,7 @@ export const IndexPage: FC = () => {
                     </div>
 
                     <div className="right">
-                      <h4
-                        className="border-bottom:1|solid|#21242726 padding:15 f:18 cursor:pointer"
-                        onClick={() => navigate(item.link)}
-                      >
+                      <h4 className="border-bottom:1|solid|#21242726 padding:15 f:18">
                         {item.title}
                       </h4>
 

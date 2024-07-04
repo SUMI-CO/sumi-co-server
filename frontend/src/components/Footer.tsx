@@ -4,7 +4,7 @@ export const Footer: FC = () => {
   const socialNavigations = [
     {
       text: "Instagram",
-      link: "",
+      link: "https://www.instagram.com/sumico_hub",
     },
     {
       text: "Linkedin",
@@ -25,13 +25,13 @@ export const Footer: FC = () => {
   ];
 
   return (
-    <footer className="root-footer padding:45|45|25|45 flex gap-x:40">
+    <footer className="root-footer padding:45|45|25|45 flex gap-x:40 bg:#f2f4fa">
       {socialNavigations.map((navigation) => (
         <a
           key={navigation.text}
           href={navigation.link}
           target="_blank"
-          className="cursor:pointer text-decoration:none f:#212427 f:medium"
+          className="cursor:pointer text-decoration:none f:#212427 f:medium text-decoration:underline:hover"
         >
           {navigation.text}
         </a>
