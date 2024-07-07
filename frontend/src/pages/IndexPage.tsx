@@ -17,7 +17,6 @@ export const IndexPage: FC = () => {
       label: "Consectetur adipisicing elit.",
       imageUrl: "https://placehold.co/65",
     },
-
     {
       label: "Solor sit amet, consectetur adipisicing",
       imageUrl: "https://placehold.co/65",
@@ -40,7 +39,7 @@ export const IndexPage: FC = () => {
           title: "Оценки",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.STUDENTS.SUBJECT_GRADES,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },
@@ -53,7 +52,7 @@ export const IndexPage: FC = () => {
           title: "Запись",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.COURSES.SINGLE_COURSES,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },
@@ -61,7 +60,7 @@ export const IndexPage: FC = () => {
           title: "Расписание",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.STUDENTS.SCHEDULES,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },
@@ -160,6 +159,7 @@ export const IndexPage: FC = () => {
         <Button
           label="Все достижения"
           className="w:300px"
+          onClick={() => navigate(PAGES.DASHBOARD.STUDENTS.PROGRESS)}
         />
       </div>
     </div>

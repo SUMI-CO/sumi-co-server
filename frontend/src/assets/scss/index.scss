@@ -1,5 +1,7 @@
 @import "variables";
 
+@import "primeicons/primeicons.css";
+
 @import "primeng-sass-theme/themes/lara/lara-light/blue/theme.scss";
 
 *,
@@ -40,7 +42,7 @@ p {
 }
 
 .min-h-window-full {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .beautiful-shadow {

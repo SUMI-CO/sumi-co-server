@@ -1,6 +1,7 @@
 import { DataTable } from "primereact/datatable";
 import { useState } from "react";
 import { Column } from "primereact/column";
+import { Button } from "primereact/button";
 
 export interface SingleCourse {
   id: number;
@@ -12,7 +13,7 @@ export interface SingleCourse {
   date: string;
 }
 
-export function SingleCoursesPage() {
+export function StudentSingleCoursesPage() {
   const [tableData] = useState<SingleCourse[]>([
     {
       id: 1,
@@ -110,7 +111,15 @@ export function SingleCoursesPage() {
 
         <Column
           header="Подлючиться"
-          body={<button>Sign in</button>}
+          body={
+            <div className="flex align-items:center justify-content:flex-end">
+              <Button
+                icon="pi pi-plus"
+                rounded
+                aria-label="Filter"
+              />
+            </div>
+          }
         />
       </DataTable>
     </div>
