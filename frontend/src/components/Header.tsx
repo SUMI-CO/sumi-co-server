@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { Avatar } from "primereact/avatar";
+import { Badge } from "primereact/badge";
 
 import logoIcon from "../assets/svg/logo.svg";
 import { PAGES } from "../constants/pages.ts";
@@ -23,7 +24,13 @@ export const Header: FC = () => {
 
       <div className="flex align-items:center gap:25">
         <div className="notifications-button flex justify-content:center align-items:center bg:#ffffff w:45 h:45 round cursor:pointer">
-          <i className="pi pi-bell f:#566F9E f:18" />
+          <i className="pi pi-bell f:#566F9E f:18 p-overlay-badge">
+            <Badge
+              value="5"
+              severity="danger"
+              className="top:-3px right:-3px"
+            />
+          </i>
         </div>
 
         <div className="username cursor:pointer">
