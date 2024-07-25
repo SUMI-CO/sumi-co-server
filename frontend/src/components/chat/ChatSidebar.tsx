@@ -20,13 +20,13 @@ export const ChatSidebar: FC = () => {
       onHide={() => setIsShow(false)}
       className="w:full w:20rem@md w:30rem@lg"
     >
-      <div className="w:full h:full flex flex:col flex:1 rel">
-        <div className="flex flex:col mt:auto">
-          <div className="messages w:full flex flex:col">
+      <div className="w:full h:full flex flex:col flex:1">
+        <div className="flex flex:col mt:auto rel">
+          <div className="messages mb:70 w:full flex flex:col">
             {messages.map((message) => (
               <div
                 key={message.id}
-                className="message"
+                className="message bg:#fff mb:40 mb:0:last-child"
               >
                 <p>{message.userName}</p>
 

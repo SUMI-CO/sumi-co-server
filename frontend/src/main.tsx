@@ -11,10 +11,11 @@ import "@master/css";
 import "./assets/scss/index.scss";
 
 import { AppLayout } from "./layouts/AppLayout.tsx";
-import { IndexPage } from "./pages/IndexPage.tsx";
-import StudentCoursesPage from "./pages/students/StudentCoursesPage.tsx";
-import { StudentSingleCoursesPage } from "./pages/students/StudentSingleCoursesPage.tsx";
 import { PAGES } from "./constants/pages.ts";
+
+import { IndexPage } from "./pages/IndexPage.tsx";
+import { StudentSingleCoursesPage } from "./pages/students/StudentSingleCoursesPage.tsx";
+import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
 import { StudentSchedulesPage } from "./pages/students/StudentSchedulesPage.tsx";
 import { StudentSubjectGradesPage } from "./pages/students/StudentSubjectGradesPage.tsx";
 import { StudentProgressPage } from "./pages/students/StudentProgressPage.tsx";

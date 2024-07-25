@@ -69,7 +69,7 @@ export const CustomerService = {
   },
 };
 
-export default function StudentCoursesPage() {
+export function StudentCoursesPage() {
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [expandedRows, setExpandedRows] = useState<
     DataTableExpandedRows | Customer[]

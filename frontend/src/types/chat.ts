@@ -4,4 +4,5 @@ export interface ChatMessage {
   userName: string;
   body: string;
   createdAt: Date;
+  role: string;
 }
