@@ -10,15 +10,18 @@ import "@master/css";
 
 import "./assets/scss/index.scss";
 
-import { AppLayout } from "./layouts/AppLayout.tsx";
 import { PAGES } from "./constants/pages.ts";
 
+import { AppLayout } from "./layouts/AppLayout.tsx";
+
+import { StudentIndexPage } from "./pages/students/StudentIndexPage.tsx";
 import { IndexPage } from "./pages/IndexPage.tsx";
 import { StudentSingleCoursesPage } from "./pages/students/StudentSingleCoursesPage.tsx";
-import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
+import { StudentMentorCoursesPage } from "./pages/students/StudentMentorCoursesPage.tsx";
 import { StudentSchedulesPage } from "./pages/students/StudentSchedulesPage.tsx";
 import { StudentSubjectGradesPage } from "./pages/students/StudentSubjectGradesPage.tsx";
 import { StudentProgressPage } from "./pages/students/StudentProgressPage.tsx";
+import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
 
 moment.locale("ru");
 
@@ -36,6 +39,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
             <Route path={PAGES.DASHBOARD.STUDENTS.INDEX}>
               <Route
+                path={PAGES.DASHBOARD.STUDENTS.INDEX}
+                element={<StudentIndexPage />}
+              />
+              <Route
+                path={PAGES.DASHBOARD.STUDENTS.COURSES}
+                element={<StudentCoursesPage />}
+              />
+              <Route
                 path={PAGES.DASHBOARD.STUDENTS.SCHEDULES}
                 element={<StudentSchedulesPage />}
               />
@@ -51,8 +62,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
             <Route path={PAGES.DASHBOARD.COURSES.INDEX}>
               <Route
-                index={true}
-                element={<StudentCoursesPage />}
+                path={PAGES.DASHBOARD.COURSES.MENTOR}
+                element={<StudentMentorCoursesPage />}
               />
               <Route
                 path={PAGES.DASHBOARD.COURSES.SINGLE_COURSES}
