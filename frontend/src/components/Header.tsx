@@ -16,7 +16,7 @@ export const Header: FC = () => {
   const [username] = useRecoilState(userName);
 
   return (
-    <header className="root-header flex justify-content:space-between align-items:center bg:#566F9E padding:15|45 rb:12">
+    <header className="root-header flex justify-content:space-between align-items:center bg:#566F9E padding:15|45 rb:6">
       <img
         src={logoIcon}
         alt="logo"

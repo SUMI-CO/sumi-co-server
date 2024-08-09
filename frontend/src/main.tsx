@@ -14,8 +14,8 @@ import { PAGES } from "./constants/pages.ts";
 
 import { AppLayout } from "./layouts/AppLayout.tsx";
 
-import { StudentIndexPage } from "./pages/students/StudentIndexPage.tsx";
 import { IndexPage } from "./pages/IndexPage.tsx";
+import { NotFoundPage } from "./pages/NotFoundPage.tsx";
 import { StudentSingleCoursesPage } from "./pages/students/StudentSingleCoursesPage.tsx";
 import { StudentMentorCoursesPage } from "./pages/students/StudentMentorCoursesPage.tsx";
 import { StudentSchedulesPage } from "./pages/students/StudentSchedulesPage.tsx";
@@ -37,11 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               element={<IndexPage />}
             />
 
+            <Route
+              path="*"
+              element={<NotFoundPage />}
+            />
+
             <Route path={PAGES.DASHBOARD.STUDENTS.INDEX}>
-              <Route
-                path={PAGES.DASHBOARD.STUDENTS.INDEX}
-                element={<StudentIndexPage />}
-              />
               <Route
                 path={PAGES.DASHBOARD.STUDENTS.COURSES}
                 element={<StudentCoursesPage />}

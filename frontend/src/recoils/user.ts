@@ -7,11 +7,6 @@ export const userName = atom<string>({
   default: "Қантаев Ш.Е.",
 });
 
-export const userIsAdmin = atom<boolean>({
-  key: "userIsAdmin",
-  default: false,
-});
-
 export const userRoleID = atom<UserRole>({
   key: "userRoleID",
   default: UserRole.Student,
