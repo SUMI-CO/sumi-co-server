@@ -31,7 +31,7 @@ export const StudentIndexPage: FC = () => {
           title: "Курс",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.STUDENTS.COURSES,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },
@@ -107,7 +107,7 @@ export const StudentIndexPage: FC = () => {
                   <div
                     key={item.title}
                     onClick={() => navigate(item.link)}
-                    className="item flex bg:#fff beautiful-shadow r:6px overflow:hidden transform:scale(1.025):hover ~transform|100ms|ease-in cursor:pointer"
+                    className="item flex bg:#fff beautiful-shadow box-shadow:none:hover r:6px overflow:hidden transform:translateY(3px):hover ~all|100ms|ease-in cursor:pointer"
                   >
                     <div className="left w:160 h:160">
                       <img

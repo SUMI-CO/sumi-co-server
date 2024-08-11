@@ -78,7 +78,7 @@ export const StudentProgressPage: FC = () => {
         {progressItems.map((item) => (
           <div
             key={item.id}
-            className="flex flex:col align-items:center justify-content:center w:300 h:400 bg:#fff r:10"
+            className="flex flex:col align-items:center justify-content:center w:300 h:400 bg:#fff r:10 beautiful-shadow"
           >
             <img
               src={item.imageUrl}

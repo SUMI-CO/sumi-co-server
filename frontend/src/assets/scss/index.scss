@@ -16,7 +16,8 @@ body {
 
   font-size: 16px;
   color: $fontColor;
-  background-color: #fff;
+  background: url("/back.jpg") no-repeat;
+  background-size: cover;
 }
 
 .root-main {

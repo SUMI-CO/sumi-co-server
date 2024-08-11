@@ -22,6 +22,7 @@ import { StudentSchedulesPage } from "./pages/students/StudentSchedulesPage.tsx"
 import { StudentSubjectGradesPage } from "./pages/students/StudentSubjectGradesPage.tsx";
 import { StudentProgressPage } from "./pages/students/StudentProgressPage.tsx";
 import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
+import { ProfilePage } from "./pages/ProfilePage.tsx";
 
 moment.locale("ru");
 
@@ -40,6 +41,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route
               path="*"
               element={<NotFoundPage />}
+            />
+
+            <Route
+              path={PAGES.DASHBOARD.PROFILE}
+              element={<ProfilePage />}
             />
 
             <Route path={PAGES.DASHBOARD.STUDENTS.INDEX}>

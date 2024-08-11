@@ -12,8 +12,8 @@
   "dependencies": {
     "@master/css": "^1.37.8",
     "primeicons": "^7.0.0",
-    "primeng-sass-theme": "github:primefaces/primeng-sass-theme#17.18.0",
-    "primereact": "^10.6.6",
+    "primeng-sass-theme": "github:primefaces/primeng-sass-theme#17.18.3",
+    "primereact": "^10.8.2",
     "react": "^18.2.0",
     "react-big-calendar": "^1.13.0",
     "react-dom": "^18.2.0",

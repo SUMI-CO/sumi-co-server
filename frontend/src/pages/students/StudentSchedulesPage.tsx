@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Calendar, momentLocalizer, Event } from "react-big-calendar";
 import moment from "moment";
+import { blackRandomColor } from "../../utilities/color.ts";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
@@ -32,6 +33,19 @@ const createLessonEvent: CreateLessonEvent = (props) => {
     end: props.endDate,
   };
 };
+
+function eventStyleGetter(/* event: Event */) {
+  const style = {
+    backgroundColor: blackRandomColor(),
+    color: "white",
+    borderRadius: "5px",
+    border: "none",
+  };
+
+  return {
+    style,
+  };
+}
 
 export const StudentSchedulesPage: FC = () => {
   const events: Event[] = [
@@ -94,8 +108,12 @@ export const StudentSchedulesPage: FC = () => {
       <Calendar
         localizer={localize}
         events={events}
-        selectable={"ignoreEvents"}
+        views={{
+          week: true,
+        }}
         defaultDate={new Date()}
+        eventPropGetter={eventStyleGetter}
+        selectable={false}
         defaultView="week"
         className="w:full"
       />

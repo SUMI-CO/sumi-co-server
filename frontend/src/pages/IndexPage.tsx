@@ -2,14 +2,14 @@ import { FC } from "react";
 import { useRecoilState } from "recoil";
 
 import { UserRole } from "../types/user.ts";
-import { userRoleID } from "../recoils/user.ts";
+import { userRecoilState } from "../recoils/user.ts";
 
 import { StudentIndexPage } from "./students/StudentIndexPage.tsx";
 
 export const IndexPage: FC = () => {
-  const [roleID] = useRecoilState<UserRole>(userRoleID);
+  const [user] = useRecoilState(userRecoilState);
 
-  if (roleID === UserRole.Student) {
+  if (user.role === UserRole.Student) {
     return <StudentIndexPage />;
   }
 

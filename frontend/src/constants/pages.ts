@@ -1,6 +1,7 @@
 export const PAGES = {
   DASHBOARD: {
     INDEX: "/",
+    PROFILE: "/profile",
     STUDENTS: {
       INDEX: "/students",
       COURSES: "/students/courses",
