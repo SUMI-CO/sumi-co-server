@@ -23,6 +23,8 @@ import { StudentSubjectGradesPage } from "./pages/students/StudentSubjectGradesP
 import { StudentProgressPage } from "./pages/students/StudentProgressPage.tsx";
 import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
 import { ProfilePage } from "./pages/ProfilePage.tsx";
+import { StudentCompetitionsPage } from "./pages/students/StudentCompetitionsPage.tsx";
+import { StudentCourseLessons } from "./pages/students/StudentCourseLessons.tsx";
 
 moment.locale("ru");
 
@@ -54,6 +56,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 element={<StudentCoursesPage />}
               />
               <Route
+                path={PAGES.DASHBOARD.STUDENTS.COURSE_LESSONS}
+                element={<StudentCourseLessons />}
+              />
+              <Route
                 path={PAGES.DASHBOARD.STUDENTS.SCHEDULES}
                 element={<StudentSchedulesPage />}
               />
@@ -64,6 +70,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               <Route
                 path={PAGES.DASHBOARD.STUDENTS.PROGRESS}
                 element={<StudentProgressPage />}
+              />
+              <Route
+                path={PAGES.DASHBOARD.STUDENTS.COMPETITIONS}
+                element={<StudentCompetitionsPage />}
               />
             </Route>
 

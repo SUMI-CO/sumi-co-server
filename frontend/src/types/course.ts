@@ -1,21 +1,21 @@
-export interface ITextItem {
-  text: string;
+export enum SubLessonItemType {
+  TEXT,
+  IMAGE,
+  VIDEO,
 }
 
-export interface IImageItem {
-  imageUrl: string;
+export interface ISubLessonItem {
+  id: number;
+  type: SubLessonItemType;
+  text?: string;
+  imageUrl?: string;
+  videoUrl?: string;
 }
-
-export interface IVideoItem {
-  videoUrl: string;
-}
-
-export type SubLessonItemType = ITextItem | IImageItem | IVideoItem;
 
 export interface ISubLesson {
   id: number;
   title: string;
-  items: SubLessonItemType[];
+  items: ISubLessonItem[];
 }
 
 export interface ILesson {
@@ -27,6 +27,7 @@ export interface ILesson {
 export interface ICourse {
   id: number;
   name: string;
+  description: string;
   imageUrl: string;
   lessons: ILesson[];
 }

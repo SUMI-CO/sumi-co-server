@@ -73,7 +73,7 @@ export const StudentIndexPage: FC = () => {
           title: "Соревнования",
           descriptions:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque dolores illo nobis nulla quae tenetur.",
-          link: "",
+          link: PAGES.DASHBOARD.STUDENTS.COMPETITIONS,
           imageUrl: "https://placehold.co/160",
           imageAlt: "",
         },

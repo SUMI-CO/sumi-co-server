@@ -1,9 +1,13 @@
 import { FC } from "react";
 
 import { useRecoilState } from "recoil";
-import { courses as CoursesState } from "../../recoils/course.ts";
+import { coursesRecoilState as CoursesState } from "../../recoils/course.ts";
+import { useNavigate } from "react-router-dom";
+import { PAGES } from "../../constants/pages.ts";
 
 export const StudentCoursesPage: FC = () => {
+  const navigate = useNavigate();
+
   const [courses] = useRecoilState(CoursesState);
 
   return (
@@ -23,6 +27,14 @@ export const StudentCoursesPage: FC = () => {
           <div
             key={item.id}
             className="flex flex:col align-items:center justify-content:space-between w:275 h:300 bg:#fff beautiful-shadow box-shadow:none:hover transform:translateY(3px):hover ~all|100ms|ease-in r:10 p:20 cursor:pointer"
+            onClick={() =>
+              navigate(
+                PAGES.DASHBOARD.STUDENTS.COURSE_LESSONS.replace(
+                  ":lessonId",
+                  item.id.toString(),
+                ),
+              )
+            }
           >
             <img
               src={item.imageUrl}
