@@ -25,6 +25,8 @@ import { StudentCoursesPage } from "./pages/students/StudentCoursesPage.tsx";
 import { ProfilePage } from "./pages/ProfilePage.tsx";
 import { StudentCompetitionsPage } from "./pages/students/StudentCompetitionsPage.tsx";
 import { StudentCourseLessons } from "./pages/students/StudentCourseLessons.tsx";
+import { StudentAuthRegistrationPage } from "./pages/students/auth/StudentAuthRegistrationPage.tsx";
+import { StudentAuthRegistrationThanks } from "./pages/students/auth/StudentAuthRegistrationThanks.tsx";
 
 moment.locale("ru");
 
@@ -33,6 +35,16 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <RecoilRoot>
       <BrowserRouter>
         <Routes>
+          <Route
+            element={<StudentAuthRegistrationPage />}
+            path={PAGES.AUTH.STUDENT}
+          />
+
+          <Route
+            element={<StudentAuthRegistrationThanks />}
+            path={PAGES.AUTH.STUDENT_THANKS}
+          />
+
           <Route element={<AppLayout />}>
             <Route
               index={true}

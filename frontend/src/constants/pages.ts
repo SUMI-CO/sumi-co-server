@@ -1,4 +1,8 @@
 export const PAGES = {
+  AUTH: {
+    STUDENT: "/auth/student",
+    STUDENT_THANKS: "/auth/student-thanks",
+  },
   DASHBOARD: {
     INDEX: "/",
     PROFILE: "/profile",
