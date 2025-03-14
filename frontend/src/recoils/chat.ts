@@ -13,7 +13,7 @@ export const chatMessages = atom<ChatMessage[]>({
     {
       id: 1,
       userID: 12,
-      userName: "Sherhan",
+      userName: "binur",
       body: "Hello, friend!",
       createdAt: new Date(),
       role: "User",
@@ -21,7 +21,7 @@ export const chatMessages = atom<ChatMessage[]>({
     {
       id: 2,
       userID: 12,
-      userName: "Sherhan",
+      userName: "binur",
       body: "Hello, friend!",
       createdAt: new Date(),
       role: "User",
@@ -29,7 +29,7 @@ export const chatMessages = atom<ChatMessage[]>({
     {
       id: 3,
       userID: 12,
-      userName: "Sherhan",
+      userName: "binur",
       body: "Hello, friend!",
       createdAt: new Date(),
       role: "User",
@@ -37,7 +37,7 @@ export const chatMessages = atom<ChatMessage[]>({
     {
       id: 4,
       userID: 12,
-      userName: "Sherhan",
+      userName: "binur",
       body: "Hello, friend!",
       createdAt: new Date(),
       role: "User",
@@ -45,7 +45,7 @@ export const chatMessages = atom<ChatMessage[]>({
     {
       id: 5,
       userID: 12,
-      userName: "Sherhan",
+      userName: "binur",
       body: "Hello, friend!",
       createdAt: new Date(),
       role: "User",

@@ -63,7 +63,7 @@ export const StudentCompetitionsPage: FC = () => {
     {
       id: 3,
       ssoUserId: 15,
-      firstName: "Бінұр",
+      firstName: "Бинұр",
       direction: 1,
       telegramUsername: "biko",
       discordUsername: "biko",
