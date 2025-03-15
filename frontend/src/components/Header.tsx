@@ -13,12 +13,12 @@ import { userRecoilState } from "../recoils/user.ts";
 import { SSO_PORTAL_LINK } from "../constants/links.ts";
 
 export const Header: FC = () => {
-  const notificationsOverlayPanel = useRef<OverlayPanel>();
+  const notificationsOverlayPanel = useRef<OverlayPanel | null>(null); // Добавляем начальное значение null
   const navigate = useNavigate();
 
   const [user] = useRecoilState(userRecoilState);
 
-  const avatarMenuRef = useRef<Menu>(null);
+  const avatarMenuRef = useRef<Menu | null>(null); // Добавляем начальное значение null
 
   const avatarMenuItems: MenuItem[] = [
     {
@@ -51,7 +51,7 @@ export const Header: FC = () => {
       <div className="flex align-items:center gap:25">
         <div
           className="notifications-button flex justify-content:center align-items:center bg:#ffffff w:45 h:45 round cursor:pointer"
-          onClick={(e) => notificationsOverlayPanel.current.toggle(e)}
+          onClick={(e) => notificationsOverlayPanel.current?.toggle(e)} // Проверка на существование .current
         >
           <i className="pi pi-bell f:#566F9E f:18 p-overlay-badge">
             <Badge
@@ -74,7 +74,7 @@ export const Header: FC = () => {
           className="username cursor:pointer"
           aria-controls="popup_avatar_menu"
           aria-haspopup
-          onClick={(event) => avatarMenuRef.current.toggle(event)}
+          onClick={(event) => avatarMenuRef.current?.toggle(event)} // Проверка на существование .current
         >
           <Avatar
             icon="pi pi-user"
