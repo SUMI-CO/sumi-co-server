@@ -1,28 +1,4 @@
 services:
-  postgres:
-    image: postgres:15-alpine
-    restart: always
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    env_file: .env
-
-  backend:
-    build: ./backend
-    restart: always
-    env_file: .env
-    volumes:
-      - upload_files:/backend/uploads
-    depends_on:
-      - postgres
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - "9642:8080"
-    depends_on:
-      - postgres
-
   frontend:
     build: ./frontend
     restart: always
@@ -30,9 +6,3 @@ services:
       - ./nginx/conf/densulyk.conf:/etc/nginx/nginx.conf
     ports:
       - "80:80"
-    depends_on:
-      - backend
-
-volumes:
-  postgres_data:
-  upload_files:
